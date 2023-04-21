@@ -5,4 +5,4 @@ Challenge is to build out this age calculator app and get it looking as close to
 
 ## Deployed project
 Check it out here
-Hosted page: https://github.com/oreoluwa212/Age_calculator_app_HTT
+Hosted page: https://oreoluwa212.github.io/Age_calculator_app_HTT/
