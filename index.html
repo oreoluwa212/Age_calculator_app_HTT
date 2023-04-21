@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- link to the css file -->
+  <link rel="stylesheet" href="./style.css">
+  <script src="./index.js" defer></script>
+  <title>Age calculator | HTT</title>
+
+</head>
+
+<body>
+
+  <div class="can">
+    <div class="container">
+      <form>
+        <div class="input_container">
+          <!-- Data Input corner -->
+          <div class="day_month_year">
+            <label for="day">Day</label>
+            <input type="number" placeholder="DD" id="day">
+            <small></small>
+          </div>
+
+          <div class="day_month_year">
+            <label for="month">Month</label>
+            <input type="number" placeholder="MM" id="month">
+            <small></small>
+          </div>
+
+          <div class="day_month_year">
+            <label for="year">
+              Year
+            </label>
+            <input type="number" placeholder="YYYY" id="year">
+            <small></small>
+          </div>
+        </div>
+
+        <!-- Submit button block -->
+        <div class="submit_block">
+          <hr>
+          <button type="submit" title="Click to know your age" class="btn"><img src="./assets/images/icon-arrow.svg" alt="icon"></button>
+        </div>
+      </form>
+
+      <!-- Result corner -->
+      <div class="output">
+        <h1><span id="YY">--</span>years</h1>
+        <h1><span id="MM">--</span>months</h1>
+        <h1><span id="DD">--</span>days</h1>
+      </div>
+    </div>
+
+    <!-- I did a thing!! -->
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Oreoluwa Ruth Ajayi</a>.
+    </div>
+  </div>
+  
+</body>
+
+</html>

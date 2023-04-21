@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,700;1,800&display=swap');
+
+
+:root {
+   --Purple: hsl(259, 100%, 65%);
+   --Light-red: hsl(0, 100%, 67%);
+   --White: hsl(0, 0%, 100%);
+   --Off-white: hsl(0, 0%, 94%);
+   --Light-grey: hsl(0, 0%, 86%);
+   --Smokey-grey: hsl(0, 1%, 44%);
+   --Off-black: hsl(0, 0%, 8%);
+}
+
+* {
+   font-family: "Poppins", sans-serif;
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+body{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--Light-grey);
+}
+
+.can{
+   background-color: var(--White);
+   border-bottom-left-radius: .2rem;
+   border-bottom-right-radius: 8rem;
+   width: 900px;
+}
+.container {
+   padding: 3rem;
+   display: flex;
+   flex-direction: column;
+}
+form {
+   display: flex;
+   flex-direction: column;
+}
+
+.input_container{
+   display: flex;
+   gap: 2rem;
+}
+
+.day_month_year {
+   display: flex;
+   flex-direction: column;
+}
+
+.day_month_year label{
+   font-weight: 900;
+   text-transform: uppercase;  
+}
+
+input {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: .6rem;
+   width: 130px;
+   border-radius: .3rem;
+   border: 2px solid var(--Light-grey);
+   font-size: 1.6rem;
+}
+
+input::placeholder {
+   font-size: 1.9rem;
+   font-weight: 900;
+}
+
+small{
+   color: var(--Light-red);
+}
+
+.submit_block {
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: center;
+   padding-top: .9rem;
+}
+
+.submit_block hr {
+   width: 100%;
+}
+
+.btn{
+   border-radius: 50%;
+      background-color: var(--Purple);
+      color: var(--Off-white);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.output h1 {
+   font-size: 5rem;
+   font-weight: 800;
+   font-style: italic;
+   height: fit-content;
+}
+
+.output span {
+   color: var(--Purple);
+}
+
+.attribution{
+   font-size: .9rem;
+   color: var(--Purple);
+   font-weight: bold;
+}
+
+@media  screen and (max-width: 800px) {
+   .can{
+      width: 360px;
+   }
+   .container{
+      padding: 1rem;
+   }
+   .input_container{
+      gap: 0;
+      justify-content: space-between;
+      margin-bottom: 4rem;
+   }
+   .can{
+      width: 600px;
+   }
+   .output h1{
+      font-size: 3rem;
+   }
+   .submit_block {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-top: .2rem;
+      }
+   
+   .attribution{
+      font-size: .7rem;
+      font-weight: bold;
+   }
+}
