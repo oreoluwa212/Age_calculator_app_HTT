@@ -29,7 +29,7 @@ body{
 .can{
    background-color: var(--White);
    border-bottom-left-radius: .2rem;
-   border-bottom-right-radius: 8rem;
+   border-bottom-right-radius: 6rem;
    width: 900px;
 }
 .container {
@@ -116,7 +116,7 @@ small{
    font-weight: bold;
 }
 
-@media  screen and (max-width: 800px) {
+@media  screen and (max-width: 768px) {
    .can{
       width: 360px;
    }
@@ -144,5 +144,61 @@ small{
    .attribution{
       font-size: .7rem;
       font-weight: bold;
+   }
+}
+@media  screen and (max-width: 360px) {
+
+   .can {
+         width: 300px;
+      }
+
+   .container{
+      padding: 1.5rem;
+   }
+   .input_container{
+      gap: 0;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+   }
+
+      .day_month_year {
+         display: flex;
+         flex-direction: column;
+      }
+   
+      .day_month_year label {
+         font-weight: 600;
+         text-transform: uppercase;
+      }
+   
+      input {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: .9rem;
+         width: 90px;
+         border-radius: .3rem;
+         border: 2px solid var(--Light-grey);
+         font-size: 1.6rem;
+      }
+   
+   .output h1{
+      font-size: 2rem;
+   }
+   .submit_block {
+      display: flex;
+      flex-direction: row;
+      flex-direction: row;
+      align-items: center;
+      padding-top: .2rem;
+      }
+   
+   .attribution{
+      margin-bottom: 10px;
+      margin-right: 40px;
+      margin-left: 50px;
+      font-size: .7rem;
+      font-weight: bold;
+      padding-left: 3rem;
    }
 }
