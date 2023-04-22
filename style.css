@@ -114,6 +114,7 @@ small{
    font-size: .9rem;
    color: var(--Purple);
    font-weight: bold;
+   font-style: italic;
 }
 
 @media  screen and (max-width: 768px) {
@@ -144,6 +145,7 @@ small{
    .attribution{
       font-size: .7rem;
       font-weight: bold;
+      font-style: italic;
    }
 }
 @media  screen and (max-width: 360px) {
@@ -161,6 +163,12 @@ small{
       margin-bottom: 1rem;
    }
 
+      input::placeholder {
+         font-size: 1.2rem;
+         font-weight:200;
+         padding: rem;
+      }
+
       .day_month_year {
          display: flex;
          flex-direction: column;
@@ -176,7 +184,7 @@ small{
          align-items: center;
          justify-content: center;
          padding: .9rem;
-         width: 90px;
+         width: 80px;
          border-radius: .3rem;
          border: 2px solid var(--Light-grey);
          font-size: 1.6rem;
@@ -199,6 +207,7 @@ small{
       margin-left: 50px;
       font-size: .7rem;
       font-weight: bold;
-      padding-left: 3rem;
+      font-style: italic;
+      padding-left: 0.3rem;
    }
 }
