@@ -1,70 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./js/ageCalculator.js" type="module" defer></script>
+    <title>Enhanced Age Calculator | HTT</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+  <body>
+    <div class="app-container">
+      <!-- Header Section -->
+      <header class="header">
+        <h1>Age Calculator</h1>
+        <p>Discover your exact age in years, months, and days</p>
+      </header>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+      <main class="container">
+        <!-- Form Section -->
+        <section class="form-section">
+          <form id="age-form" novalidate>
+            <div class="input-grid">
+              <div class="input-group">
+                <label for="day">Day</label>
+                <div class="input-wrapper">
+                  <input
+                    type="number"
+                    id="day"
+                    class="input-field"
+                    placeholder="DD"
+                    min="1"
+                    max="31"
+                    aria-describedby="day-error"
+                  />
+                  <div class="input-status"></div>
+                </div>
+                <small
+                  id="day-error"
+                  class="error-message"
+                  role="alert"
+                ></small>
+              </div>
 
-  <!-- link to the css file -->
-  <link rel="stylesheet" href="./style.css">
-  <script src="./index.js" defer></script>
-  <title>Age calculator | HTT</title>
+              <div class="input-group">
+                <label for="month">Month</label>
+                <div class="input-wrapper">
+                  <input
+                    type="number"
+                    id="month"
+                    class="input-field"
+                    placeholder="MM"
+                    min="1"
+                    max="12"
+                    aria-describedby="month-error"
+                  />
+                  <div class="input-status"></div>
+                </div>
+                <small
+                  id="month-error"
+                  class="error-message"
+                  role="alert"
+                ></small>
+              </div>
 
-</head>
+              <div class="input-group">
+                <label for="year">Year</label>
+                <div class="input-wrapper">
+                  <input
+                    type="number"
+                    id="year"
+                    class="input-field"
+                    placeholder="YYYY"
+                    min="1900"
+                    max="2024"
+                    aria-describedby="year-error"
+                  />
+                  <div class="input-status"></div>
+                </div>
+                <small
+                  id="year-error"
+                  class="error-message"
+                  role="alert"
+                ></small>
+              </div>
+            </div>
 
-<body>
+            <!-- Submit Section -->
+            <div class="submit-section">
+              <hr class="divider" />
+              <button
+                type="submit"
+                class="submit-btn"
+                title="Calculate your age"
+                aria-label="Calculate age"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19M19 12L12 5M19 12L12 19"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </section>
 
-  <div class="can">
-    <div class="container">
-      <form>
-        <div class="input_container">
-          <!-- Data Input corner -->
-          <div class="day_month_year">
-            <label for="day">Day</label>
-            <input type="number" placeholder="DD" id="day">
-            <small></small>
+        <!-- Results Section -->
+        <section class="results-section" id="results" aria-live="polite">
+          <div class="result-grid">
+            <div class="result-item">
+              <span class="result-number" id="years-result">--</span>
+              <span class="result-label">years</span>
+            </div>
+            <div class="result-item">
+              <span class="result-number" id="months-result">--</span>
+              <span class="result-label">months</span>
+            </div>
+            <div class="result-item">
+              <span class="result-number" id="days-result">--</span>
+              <span class="result-label">days</span>
+            </div>
           </div>
 
-          <div class="day_month_year">
-            <label for="month">Month</label>
-            <input type="number" placeholder="MM" id="month">
-            <small></small>
+          <!-- Additional Info Section -->
+          <div class="additional-info" id="additional-info">
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="info-number" id="total-days">0</span>
+                <span class="info-label">Total Days</span>
+              </div>
+              <div class="info-item">
+                <span class="info-number" id="total-weeks">0</span>
+                <span class="info-label">Total Weeks</span>
+              </div>
+              <div class="info-item">
+                <span class="info-number" id="total-months">0</span>
+                <span class="info-label">Total Months</span>
+              </div>
+            </div>
           </div>
 
-          <div class="day_month_year">
-            <label for="year">
-              Year
-            </label>
-            <input type="number" placeholder="YYYY" id="year">
-            <small></small>
+          <!-- Fun Facts Section -->
+          <div class="fun-facts" id="fun-facts">
+            <h3>Did you know?</h3>
+            <p id="fact-text"></p>
           </div>
-        </div>
+        </section>
+      </main>
 
-        <!-- Submit button block -->
-        <div class="submit_block">
-          <hr>
-          <button type="submit" title="Click to know your age" class="btn"><img src="./assets/images/icon-arrow.svg" alt="icon"></button>
-        </div>
-      </form>
-
-      <!-- Result corner -->
-      <div class="output">
-        <h1><span id="YY">--</span>years</h1>
-        <h1><span id="MM">--</span>months</h1>
-        <h1><span id="DD">--</span>days</h1>
-      </div>
+      <!-- Footer -->
+      <footer class="attribution">
+        <p>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Enhanced by <a href="#">Oreoluwa Ruth Ajayi</a>.
+        </p>
+      </footer>
     </div>
 
-    <!-- I did a thing!! -->
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Oreoluwa Ruth Ajayi</a>.
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading">
+      <div class="loading-spinner"></div>
     </div>
-  </div>
-  
-</body>
-
+  </body>
 </html>
